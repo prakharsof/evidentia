@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>Evidentia — evidence-first research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">E</div><div><strong>evidentia</strong><span>RESEARCH WORKSPACE</span></div></div>
+      <div class="side-label">WORKSPACE</div><button class="nav-item active"><span>◫</span> Research desk</button>
+      <div class="library-head"><span class="side-label">YOUR LIBRARY</span><span id="doc-count" class="count">0</span></div>
+      <div id="documents" class="documents"><div class="empty-library">Your sources will appear here.</div></div>
+      <div class="sidebar-bottom"><div class="privacy-dot"></div><div><strong>Your research stays local</strong><span>Documents stored in SQLite on this machine</span></div></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> Research desk</div><div class="top-status"><i></i><span id="mode-label">Checking system</span></div></header>
+      <section class="hero"><div class="eyebrow"><span></span> EVIDENCE-FIRST KNOWLEDGE WORKSPACE</div><h1>Think clearly.<br><em>Know your sources.</em></h1><p>Bring your documents together. Ask precise questions. Every answer leads back to the evidence.</p></section>
+      <section class="work-grid">
+        <div class="panel ask-panel"><div class="panel-heading"><div><div class="panel-kicker">01 / ASK</div><h2>Research a question</h2></div><div class="spark">✳</div></div>
+          <label class="question-label" for="question">What do you want to understand?</label>
+          <textarea id="question" placeholder="e.g. What are the main trade-offs between the approaches described in these papers?" maxlength="1200"></textarea>
+          <div class="ask-footer"><span>Answers are grounded in your source library</span><button id="ask-button" class="primary-btn">Find evidence <span>↗</span></button></div>
+          <div id="answer" class="answer hidden"></div>
+        </div>
+        <div class="panel upload-panel"><div class="panel-heading"><div><div class="panel-kicker">02 / ADD SOURCES</div><h2>Build your library</h2></div><div class="upload-icon">↥</div></div>
+          <label id="dropzone" class="dropzone" for="file-input"><input id="file-input" type="file" accept=".pdf,.txt,.md"><div class="upload-symbol">＋</div><strong>Drop a document here</strong><span>or <u>browse files</u></span><small>PDF, Markdown, or text · max 12 MB</small></label>
+          <div id="upload-status" class="upload-status">Text-based PDFs work best. Scanned PDFs need OCR first.</div>
+        </div>
+      </section>
+      <section class="evidence-section"><div class="evidence-title"><div><div class="panel-kicker">03 / VERIFY</div><h2>Evidence trail</h2></div><span id="source-count" class="source-count">WAITING FOR A QUESTION</span></div><div id="sources" class="source-list"><div class="source-placeholder"><span>↳</span><div><strong>Good research is inspectable.</strong><p>Ask a question to see retrieved passages, page references, and relevance signals.</p></div></div></div></section>
+      <footer><span>BUILT FOR CAREFUL THINKING</span><span>LEXICAL RETRIEVAL · CITATION CHECKS · LOCAL-FIRST STORAGE</span></footer>
+    </main>
+  </div>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
